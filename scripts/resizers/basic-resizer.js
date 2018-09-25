@@ -1,8 +1,8 @@
 angular.module("rzTable").factory("BasicResizer", ["ResizerModel", function(ResizerModel) {
 
-    function BasicResizer(table, columns, container) {
+    function BasicResizer(table, columns, container, tableId) {
         // Call super constructor
-        ResizerModel.call(this, table, columns, container)
+        ResizerModel.call(this, table, columns, container, tableId)
 
         // All columns are controlled in basic mode
         this.ctrlColumns = this.columns;

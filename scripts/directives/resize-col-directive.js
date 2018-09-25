@@ -11,4 +11,4 @@ angular.module("rzTable").directive('rzCol', [function() {
   function link(scope, element, attr) {
     scope.rzCol = scope.$eval(attr.rzCol)
   }
-}])
+}]);

@@ -1,10 +1,10 @@
 angular.module("rzTable").factory("FixedResizer", ["ResizerModel", function(ResizerModel) {
 
-    function FixedResizer(table, columns, container) {
+    function FixedResizer(table, columns, container, tableId) {
         // Call super constructor
-        ResizerModel.call(this, table, columns, container)
+        ResizerModel.call(this, table, columns, container, tableId);
 
-        this.fixedColumn = $(table).find('th').first();
+        this.fixedColumn = $(table[tableId]).find('th').first();
         this.bound = false;
     }
 

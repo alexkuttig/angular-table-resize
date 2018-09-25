@@ -1,9 +1,10 @@
 angular.module("rzTable").factory("ResizerModel", [function() {
 
-    function ResizerModel(table, columns, container){
-        this.table = table;
-        this.columns = columns;
-        this.container = container;
+    function ResizerModel(table, columns, container, tableId){
+
+        this.table = table[tableId];
+        this.columns = columns[tableId];
+        this.container = container[tableId];
 
         this.handleColumns = this.handles();
         this.ctrlColumns = this.ctrlColumns();
